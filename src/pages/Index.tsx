@@ -7,10 +7,12 @@ import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import Navigation from "@/components/Navigation";
+import ParticleBackground from "@/components/ParticleBackground";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900 relative">
+      <ParticleBackground />
       <Navigation />
       <Hero />
       <About />
