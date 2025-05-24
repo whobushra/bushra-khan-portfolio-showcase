@@ -1,55 +1,52 @@
 
 const Skills = () => {
   const skills = [
-    { name: 'C++', level: 85 },
-    { name: 'JavaScript', level: 90 },
-    { name: 'ReactJS', level: 95 },
-    { name: 'Redux', level: 80 },
-    { name: 'Next.js', level: 85 },
-    { name: 'Node.js', level: 88 },
-    { name: 'Express.js', level: 85 },
-    { name: 'MySQL', level: 82 },
-    { name: 'MongoDB', level: 80 },
-    { name: 'Git', level: 90 },
-    { name: 'DBMS', level: 75 },
-    { name: 'OOP', level: 85 }
+    { name: 'React', color: 'bg-blue-500' },
+    { name: 'Node.js', color: 'bg-green-500' },
+    { name: 'Flutter', color: 'bg-cyan-500' },
+    { name: 'JavaScript', color: 'bg-yellow-500' },
+    { name: 'MongoDB', color: 'bg-green-600' },
+    { name: 'MySQL', color: 'bg-blue-600' },
+    { name: 'Redux', color: 'bg-purple-500' },
+    { name: 'Next.js', color: 'bg-gray-800' },
+    { name: 'Express.js', color: 'bg-gray-600' },
+    { name: 'Git', color: 'bg-orange-500' },
+    { name: 'C++', color: 'bg-blue-700' },
+    { name: 'DBMS', color: 'bg-indigo-500' },
+    { name: 'OOP', color: 'bg-red-500' }
   ];
 
   return (
-    <section id="skills" className="py-20 px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="section-padding bg-gray-50">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Skills <span className="text-cyan-400">and tools</span>
+          <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+            My Skills
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Technologies & <span className="gradient-bg bg-clip-text text-transparent">Tools I Use</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
-          <p className="text-gray-400 mt-6 max-w-2xl mx-auto">
-            For a more detailed overview, please feel free to check the tools that were used on a per-project basis.
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            A comprehensive toolkit for building modern, scalable applications
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap gap-4 justify-center max-w-4xl mx-auto">
           {skills.map((skill, index) => (
             <div 
               key={skill.name}
-              className="bg-gray-800/50 backdrop-blur-sm border border-gray-700 p-6 rounded-xl hover:border-cyan-400/50 transition-all duration-300 group"
+              className={`${skill.color} text-white px-6 py-3 rounded-full font-medium shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="flex justify-between items-center mb-3">
-                <span className="text-white font-medium text-lg">{skill.name}</span>
-                <span className="text-cyan-400 text-sm">{skill.level}%</span>
-              </div>
-              <div className="w-full bg-gray-700 rounded-full h-2">
-                <div 
-                  className="bg-gradient-to-r from-cyan-400 to-purple-500 h-2 rounded-full transition-all duration-1000 ease-out"
-                  style={{ 
-                    width: `${skill.level}%`,
-                    animation: `pulse-neon 2s ease-in-out infinite`
-                  }}
-                ></div>
-              </div>
+              {skill.name}
             </div>
           ))}
+        </div>
+        
+        <div className="mt-16 text-center">
+          <p className="text-gray-600">
+            Continuously learning and adapting to new technologies to deliver cutting-edge solutions
+          </p>
         </div>
       </div>
     </section>

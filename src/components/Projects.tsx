@@ -1,89 +1,99 @@
 
+import { ExternalLink, Github } from "lucide-react";
+
 const Projects = () => {
   const projects = [
     {
       title: "Enterprise AI Agent Platform",
-      description: "Web platform with a drag-and-drop Agent Builder, agent registration APIs, and multi-agent chat orchestration.",
+      description: "Web platform with a drag-and-drop Agent Builder, agent registration APIs, and multi-agent chat orchestration for enterprise automation.",
       tech: ["React", "Node.js", "Docker", "APIs"],
-      highlights: ["Drag-and-drop interface", "Multi-agent orchestration", "Enterprise-grade platform"],
-      category: "Web Platform"
+      category: "AI Platform",
+      gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Anytrac Shipment Dashboard",
       description: "Built a portal to track shipments and visualize sales/inventory data. Integrated with SAP and Raspberry Pi for real-time retail tracking.",
-      tech: ["React", "Redux"],
-      highlights: ["60% cost reduction", "Real-time analytics", "SAP integration"],
-      category: "Dashboard"
+      tech: ["React", "Redux", "SAP Integration"],
+      category: "Analytics Dashboard",
+      gradient: "from-purple-500 to-pink-500",
+      impact: "60% cost reduction"
     },
     {
       title: "TSF Donation Portal",
-      description: "Built a donation platform with Razorpay payment integration and responsive design.",
-      tech: ["HTML", "CSS", "JavaScript"],
-      highlights: ["Payment integration", "Responsive design", "User-friendly interface"],
-      category: "E-commerce"
+      description: "Responsive donation platform with Razorpay payment integration, user authentication, and real-time donation tracking.",
+      tech: ["HTML", "CSS", "JavaScript", "Razorpay"],
+      category: "E-commerce",
+      gradient: "from-green-500 to-teal-500"
     },
     {
       title: "International Roaming UI Overhaul",
-      description: "Rebuilt front-end UI for better UX and consistency across the platform.",
-      tech: ["React.js", "Node.js"],
-      highlights: ["Improved UX", "Consistent design", "Performance optimization"],
-      category: "UI/UX"
+      description: "Complete front-end redesign for better user experience, improved performance, and consistent design patterns across the platform.",
+      tech: ["React.js", "Node.js", "UI/UX"],
+      category: "UI/UX Design",
+      gradient: "from-orange-500 to-red-500"
     }
   ];
 
   return (
-    <section id="projects" className="py-20 px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="projects" className="section-padding bg-white">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            Take a look at what we've <span className="text-cyan-400">created</span> and be <br />
-            <span className="text-purple-400">inspired</span> by
+          <div className="inline-flex items-center px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-4">
+            Portfolio
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Featured <span className="gradient-bg bg-clip-text text-transparent">Projects</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Showcasing innovative solutions and technical expertise across different domains
+          </p>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="group bg-gray-800/30 backdrop-blur-sm border border-gray-700 p-8 rounded-2xl hover:border-cyan-400/50 transition-all duration-500 transform hover:-translate-y-2 relative overflow-hidden"
+              className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover group border border-gray-100"
             >
-              {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl"></div>
-              
-              <div className="relative z-10">
-                <div className="flex justify-between items-start mb-4">
-                  <span className="text-xs text-cyan-400 font-medium px-3 py-1 bg-cyan-400/10 rounded-full border border-cyan-400/20">
-                    {project.category}
-                  </span>
+              <div className={`h-48 bg-gradient-to-br ${project.gradient} flex items-center justify-center relative overflow-hidden`}>
+                <div className="text-white text-center p-6">
+                  <div className="text-sm font-medium opacity-90 mb-2">{project.category}</div>
+                  <div className="text-2xl font-bold">{project.title}</div>
                 </div>
                 
-                <h3 className="text-xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors duration-300">
-                  {project.title}
-                </h3>
-                <p className="text-gray-400 mb-6 leading-relaxed">{project.description}</p>
+                {/* Decorative elements */}
+                <div className="absolute top-4 right-4 w-8 h-8 bg-white/20 rounded-lg"></div>
+                <div className="absolute bottom-4 left-4 w-6 h-6 bg-white/20 rounded-full"></div>
+              </div>
+              
+              <div className="p-6">
+                <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
+                
+                {project.impact && (
+                  <div className="mb-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                    <div className="text-green-700 font-semibold text-sm">Impact: {project.impact}</div>
+                  </div>
+                )}
                 
                 <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Tech Stack:</h4>
+                  <div className="text-sm font-semibold text-gray-700 mb-2">Tech Stack:</div>
                   <div className="flex flex-wrap gap-2">
                     {project.tech.map((tech) => (
-                      <span key={tech} className="bg-gray-700 text-gray-300 px-3 py-1 rounded-full text-sm border border-gray-600 hover:border-cyan-400/50 transition-colors duration-300">
+                      <span key={tech} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-medium">
                         {tech}
                       </span>
                     ))}
                   </div>
                 </div>
                 
-                <div>
-                  <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Highlights:</h4>
-                  <ul className="space-y-2">
-                    {project.highlights.map((highlight, i) => (
-                      <li key={i} className="text-gray-400 text-sm flex items-center">
-                        <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3"></div>
-                        {highlight}
-                      </li>
-                    ))}
-                  </ul>
+                <div className="flex gap-3">
+                  <button className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center gap-2">
+                    <ExternalLink className="w-4 h-4" />
+                    View Case Study
+                  </button>
+                  <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors duration-300">
+                    <Github className="w-4 h-4" />
+                  </button>
                 </div>
               </div>
             </div>
@@ -91,8 +101,8 @@ const Projects = () => {
         </div>
         
         <div className="text-center mt-12">
-          <button className="border border-cyan-400 text-cyan-400 px-8 py-3 rounded-lg hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 font-medium">
-            See more
+          <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
+            View All Projects
           </button>
         </div>
       </div>

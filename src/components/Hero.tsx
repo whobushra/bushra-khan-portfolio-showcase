@@ -1,5 +1,5 @@
 
-import { Download, Mail } from "lucide-react";
+import { Download, Mail, ArrowRight } from "lucide-react";
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -7,42 +7,69 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden px-6">
-      <div className="text-center max-w-4xl mx-auto relative z-10">
-        <div className="animate-fade-in">
-          <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-4 leading-tight">
-              Hello,
-            </h1>
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-              I am <span className="neon-text text-cyan-400">Bushra</span>,
-            </h2>
-            <h3 className="text-3xl md:text-4xl text-gray-300 mb-8 font-light">
-              Full-Stack Developer
-            </h3>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
+      {/* Background decorative elements */}
+      <div className="absolute top-20 left-10 w-20 h-20 bg-blue-200 rounded-full opacity-20 floating-animation"></div>
+      <div className="absolute top-40 right-20 w-16 h-16 bg-purple-200 rounded-full opacity-30 floating-animation" style={{animationDelay: '2s'}}></div>
+      <div className="absolute bottom-40 left-1/4 w-12 h-12 bg-green-200 rounded-full opacity-25 floating-animation" style={{animationDelay: '4s'}}></div>
+      
+      <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="text-left">
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-6">
+            👋 Hello, I'm Bushra Khan
           </div>
           
-          <p className="text-lg md:text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
-            Currently based in Mumbai. I love building 
-            <span className="text-cyan-400 font-medium"> interactive </span>
-            digital experiences on the web.
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Building Smart 
+            <span className="gradient-bg bg-clip-text text-transparent"> Digital Solutions</span> 
+            <br />with Modern Tech
+          </h1>
+          
+          <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
+            I'm a Full-Stack Developer crafting seamless web and mobile experiences using 
+            <span className="font-semibold text-blue-600"> React, Node.js, and Flutter</span>.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="group relative bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-cyan-400 hover:to-blue-500 transition-all duration-300 transform hover:scale-105 neon-glow flex items-center justify-center gap-2">
-              <Download size={20} />
-              Let's get in touch!
-              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-            </button>
-            
+          <div className="flex flex-col sm:flex-row gap-4">
             <button 
               onClick={scrollToContact}
-              className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-gray-900 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
-              <Mail size={20} />
-              Contact Me
+              Let's Connect
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            
+            <button className="border-2 border-gray-300 text-gray-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 hover:text-blue-600 transition-all duration-300 flex items-center justify-center gap-2">
+              <Download size={20} />
+              View Resume
             </button>
           </div>
+          
+          <div className="mt-12 flex items-center gap-8 text-sm text-gray-500">
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+              Available for projects
+            </div>
+            <div>Based in Mumbai, India</div>
+          </div>
+        </div>
+        
+        <div className="relative">
+          <div className="relative z-10">
+            {/* Placeholder for a professional illustration */}
+            <div className="w-full h-96 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-4xl font-bold text-white">BK</span>
+                </div>
+                <p className="text-gray-600 font-medium">Full-Stack Developer</p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute -top-6 -right-6 w-24 h-24 bg-yellow-200 rounded-2xl opacity-20 rotate-12"></div>
+          <div className="absolute -bottom-6 -left-6 w-20 h-20 bg-pink-200 rounded-2xl opacity-30 -rotate-12"></div>
         </div>
       </div>
     </section>

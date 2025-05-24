@@ -5,56 +5,81 @@ const Experience = () => {
       company: "Jio Platforms Limited",
       period: "Dec 2023 – Present",
       role: "Software Engineer",
+      description: "Leading full-stack development initiatives for enterprise applications",
       achievements: [
-        "Built dashboards for logistics",
-        "Improved API integration (40% faster load times)",
-        "Lazy loading and reusable UI components"
-      ]
+        "Built interactive dashboards for logistics and supply chain management",
+        "Improved API integration performance by 40% through optimization",
+        "Implemented lazy loading and reusable UI components for better UX",
+        "Developed real-time data visualization using React and Apex Charts"
+      ],
+      gradient: "from-blue-500 to-purple-600"
     },
     {
       company: "The Sparks Foundation",
       period: "Aug–Sep 2021",
-      role: "Intern",
+      role: "Web Development Intern",
+      description: "Contributed to open-source projects and donation platform development",
       achievements: [
-        "Developed donation UI and Razorpay integration"
-      ]
+        "Developed responsive donation UI with modern design principles",
+        "Integrated Razorpay payment gateway for seamless transactions",
+        "Collaborated with cross-functional team on project delivery"
+      ],
+      gradient: "from-green-500 to-teal-500"
     }
   ];
 
   return (
-    <section id="experience" className="py-20 px-6 relative">
-      <div className="max-w-6xl mx-auto">
+    <section id="experience" className="section-padding bg-gray-50">
+      <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-cyan-400">EXPERIENCE</span>
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium mb-4">
+            Experience
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+            Professional <span className="gradient-bg bg-clip-text text-transparent">Journey</span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 mx-auto rounded-full"></div>
+          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            Building impactful solutions and growing expertise across different organizations
+          </p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="relative pl-8 pb-12 group">
-              <div className="absolute left-0 top-0 w-4 h-4 bg-cyan-400 rounded-full group-hover:scale-125 transition-transform duration-300 shadow-lg shadow-cyan-400/50"></div>
-              {index < experiences.length - 1 && (
-                <div className="absolute left-2 top-4 w-0.5 h-16 bg-gradient-to-b from-cyan-400 to-purple-500"></div>
-              )}
-              <div className="bg-gray-800/30 backdrop-blur-sm border border-gray-700 p-6 rounded-xl ml-6 hover:border-cyan-400/50 transition-all duration-300 group-hover:-translate-y-1">
-                <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-4">
-                  <h3 className="text-xl font-bold text-white mb-2">{exp.company}</h3>
-                  <span className="text-cyan-400 font-medium text-sm bg-cyan-400/10 px-3 py-1 rounded-full">{exp.period}</span>
+            <div key={index} className="relative">
+              <div className="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                <div className={`h-2 bg-gradient-to-r ${exp.gradient}`}></div>
+                <div className="p-8">
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start mb-6">
+                    <div>
+                      <h3 className="text-2xl font-bold text-gray-900 mb-2">{exp.company}</h3>
+                      <p className="text-lg font-semibold text-blue-600 mb-2">{exp.role}</p>
+                      <p className="text-gray-600">{exp.description}</p>
+                    </div>
+                    <span className="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 rounded-full text-sm font-medium mt-4 md:mt-0">
+                      {exp.period}
+                    </span>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-4">Key Achievements:</h4>
+                    <ul className="space-y-3">
+                      {exp.achievements.map((achievement, i) => (
+                        <li key={i} className="flex items-start">
+                          <div className="w-2 h-2 bg-blue-500 rounded-full mr-4 mt-2 flex-shrink-0"></div>
+                          <span className="text-gray-600">{achievement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
-                {exp.role && (
-                  <p className="text-purple-400 font-medium mb-4">{exp.role}</p>
-                )}
-                <ul className="space-y-2">
-                  {exp.achievements.map((achievement, i) => (
-                    <li key={i} className="text-gray-400 flex items-start">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-3 mt-2"></div>
-                      {achievement}
-                    </li>
-                  ))}
-                </ul>
               </div>
+              
+              {/* Timeline connector */}
+              {index < experiences.length - 1 && (
+                <div className="flex justify-center py-4">
+                  <div className="w-px h-8 bg-gray-300"></div>
+                </div>
+              )}
             </div>
           ))}
         </div>
