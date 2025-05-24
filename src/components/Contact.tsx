@@ -10,10 +10,10 @@ const Contact = () => {
             Get In Touch
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Let's Work <span className="gradient-bg bg-clip-text text-transparent">Together</span>
+            Let's Build Something <span className="gradient-bg bg-clip-text text-transparent">Amazing Together</span>
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Ready to bring your digital vision to life? Let's discuss your project and create something amazing together.
+            Ready to discuss your next project or explore leadership opportunities? I'd love to connect and explore how we can create impact together.
           </p>
         </div>
         
@@ -55,7 +55,7 @@ const Contact = () => {
                 <input 
                   type="text" 
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                  placeholder="Project Inquiry"
+                  placeholder="Leadership Opportunity / Project Discussion"
                 />
               </div>
               
@@ -64,13 +64,13 @@ const Contact = () => {
                 <textarea 
                   rows={5}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                  placeholder="Tell me about your project..."
+                  placeholder="Tell me about your project or opportunity..."
                 ></textarea>
               </div>
               
               <button 
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <Send className="w-5 h-5" />
                 Send Message
@@ -83,14 +83,14 @@ const Contact = () => {
             <div>
               <h3 className="text-2xl font-bold text-gray-900 mb-6">Let's Connect</h3>
               <p className="text-gray-600 mb-8">
-                I'm always excited to work on new projects and collaborate with passionate teams. 
-                Feel free to reach out through any of the channels below.
+                I'm always excited to discuss new opportunities, collaborate on innovative projects, 
+                or mentor aspiring engineers. Feel free to reach out through any of the channels below.
               </p>
             </div>
             
             <div className="space-y-6">
               <a 
-                href="mailto:khanbush028@gmail.com"
+                href="mailto:vikram.paul@example.com"
                 className="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
               >
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-200 transition-colors">
@@ -98,20 +98,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="font-semibold text-gray-900">Email</div>
-                  <div className="text-gray-600">khanbush028@gmail.com</div>
-                </div>
-              </a>
-              
-              <a 
-                href="tel:+917021739514"
-                className="flex items-center p-4 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4 group-hover:bg-green-200 transition-colors">
-                  <Phone className="w-6 h-6 text-green-600" />
-                </div>
-                <div>
-                  <div className="font-semibold text-gray-900">Phone</div>
-                  <div className="text-gray-600">+91-7021739514</div>
+                  <div className="text-gray-600">vikram.paul@example.com</div>
                 </div>
               </a>
               
@@ -127,10 +114,10 @@ const Contact = () => {
             </div>
             
             <div>
-              <h4 className="font-semibold text-gray-900 mb-4">Follow Me</h4>
+              <h4 className="font-semibold text-gray-900 mb-4">Connect on Social</h4>
               <div className="flex gap-4">
                 <a 
-                  href="https://github.com/whobushra"
+                  href="https://github.com/VikramPaul007"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-gray-900 text-white rounded-lg flex items-center justify-center hover:bg-gray-800 transition-colors"
@@ -138,7 +125,7 @@ const Contact = () => {
                   <Github className="w-6 h-6" />
                 </a>
                 <a 
-                  href="https://linkedin.com/in/bushra28"
+                  href="https://linkedin.com/in/vikram-paul"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-12 h-12 bg-blue-600 text-white rounded-lg flex items-center justify-center hover:bg-blue-700 transition-colors"
@@ -147,6 +134,14 @@ const Contact = () => {
                 </a>
               </div>
             </div>
+
+            {/* Leadership highlight */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-100">
+              <h4 className="font-semibold text-gray-900 mb-2">Leadership & Mentorship</h4>
+              <p className="text-gray-600 text-sm">
+                "Vikram's ability to lead complex projects while mentoring junior engineers made a huge difference in our team's performance."
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -154,8 +149,8 @@ const Contact = () => {
       {/* Footer */}
       <div className="mt-24 pt-8 border-t border-gray-200">
         <div className="text-center">
-          <p className="text-gray-600 mb-4">© 2024 Bushra Khan. All rights reserved.</p>
-          <p className="text-sm text-gray-500">Built with React & Tailwind CSS</p>
+          <p className="text-gray-600 mb-4">© 2024 Vikram Paul. All rights reserved.</p>
+          <p className="text-sm text-gray-500">Built with React & Tailwind CSS • Senior Software Engineer & Technical Lead</p>
         </div>
       </div>
     </section>
