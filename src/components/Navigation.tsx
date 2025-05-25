@@ -27,8 +27,8 @@ const Navigation = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="text-2xl font-bold">
-            <span className="gradient-bg bg-clip-text text-transparent">Vikram</span>
-            <span className="text-gray-900">Paul</span>
+            <span className="gradient-bg bg-clip-text text-transparent">Bushra</span>
+            <span className="text-gray-900">Khan</span>
           </div>
           
           {/* Desktop Menu */}
