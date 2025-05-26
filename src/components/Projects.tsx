@@ -6,24 +6,17 @@ const Projects = () => {
     {
       title: "Enterprise AI Agent Platform",
       description: "Web platform with a drag-and-drop Agent Builder, agent registration APIs, and multi-agent chat orchestration for enterprise automation.",
-      tech: ["React", "Node.js", "Docker", "APIs"],
+      tech: ["React", "Node.js", "Docker","MongoDB", "Azure OpenAI"],
       category: "AI Platform",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       title: "Anytrac Shipment Dashboard",
       description: "Built a portal to track shipments and visualize sales/inventory data. Integrated with SAP and Raspberry Pi for real-time retail tracking.",
-      tech: ["React", "Redux", "SAP Integration"],
+      tech: ["React", "Redux", "Node.js", "SAP Integration"],
       category: "Analytics Dashboard",
       gradient: "from-purple-500 to-pink-500",
       impact: "60% cost reduction"
-    },
-    {
-      title: "TSF Donation Portal",
-      description: "Responsive donation platform with Razorpay payment integration, user authentication, and real-time donation tracking.",
-      tech: ["HTML", "CSS", "JavaScript", "Razorpay"],
-      category: "E-commerce",
-      gradient: "from-green-500 to-teal-500"
     },
     {
       title: "International Roaming UI Overhaul",
@@ -31,7 +24,14 @@ const Projects = () => {
       tech: ["React.js", "Node.js", "UI/UX"],
       category: "UI/UX Design",
       gradient: "from-orange-500 to-red-500"
-    }
+    },
+     {
+      title: "TSF Donation Portal",
+      description: "Responsive donation platform with Razorpay payment integration, user authentication, and real-time donation tracking.",
+      tech: ["HTML", "CSS", "JavaScript", "Razorpay"],
+      category: "E-commerce",
+      gradient: "from-green-500 to-teal-500"
+    },
   ];
 
   return (
