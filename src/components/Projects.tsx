@@ -1,5 +1,6 @@
 
 import { ExternalLink, Github } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Projects = () => {
   const projects = [
@@ -8,7 +9,8 @@ const Projects = () => {
       description: "Web platform with a drag-and-drop Agent Builder, agent registration APIs, and multi-agent chat orchestration for enterprise automation.",
       tech: ["React", "Node.js", "Docker","MongoDB", "Azure OpenAI"],
       category: "AI Platform",
-      gradient: "from-blue-500 to-cyan-500"
+      gradient: "from-blue-500 to-cyan-500",
+      caseStudyPath: "/case-study/enterprise-ai"
     },
     {
       title: "Anytrac Shipment Dashboard",
@@ -16,7 +18,8 @@ const Projects = () => {
       tech: ["React", "Redux", "Node.js", "SAP Integration"],
       category: "Analytics Dashboard",
       gradient: "from-purple-500 to-pink-500",
-      impact: "60% cost reduction"
+      impact: "60% cost reduction",
+      caseStudyPath: "/case-study/anytrac"
     },
     {
       title: "International Roaming UI Overhaul",
@@ -30,7 +33,8 @@ const Projects = () => {
       description: "Responsive donation platform with Razorpay payment integration, user authentication, and real-time donation tracking.",
       tech: ["HTML", "CSS", "JavaScript", "Razorpay"],
       category: "E-commerce",
-      gradient: "from-green-500 to-teal-500"
+      gradient: "from-green-500 to-teal-500",
+      caseStudyPath: "/case-study/tsf-donation"
     },
   ];
 
@@ -87,10 +91,20 @@ const Projects = () => {
                 </div>
                 
                 <div className="flex gap-3">
-                  <button className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center gap-2">
-                    <ExternalLink className="w-4 h-4" />
-                    View Case Study
-                  </button>
+                  {project.caseStudyPath ? (
+                    <Link 
+                      to={project.caseStudyPath}
+                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink className="w-4 h-4" />
+                      View Case Study
+                    </Link>
+                  ) : (
+                    <button className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors duration-300 flex items-center justify-center gap-2">
+                      <ExternalLink className="w-4 h-4" />
+                      View Case Study
+                    </button>
+                  )}
                   <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors duration-300">
                     <Github className="w-4 h-4" />
                   </button>
