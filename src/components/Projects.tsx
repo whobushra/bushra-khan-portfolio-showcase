@@ -18,7 +18,7 @@ const Projects = () => {
       tech: ["React", "Redux", "Node.js", "SAP Integration"],
       category: "Analytics Dashboard",
       gradient: "from-purple-500 to-pink-500",
-      impact: "60% cost reduction",
+      // impact: "60% cost reduction",
       caseStudyPath: "/case-study/anytrac"
     },
     {
@@ -73,11 +73,11 @@ const Projects = () => {
               <div className="p-6">
                 <p className="text-gray-600 mb-4 leading-relaxed">{project.description}</p>
                 
-                {project.impact && (
+                {/* {project.impact && (
                   <div className="mb-4 p-3 bg-green-50 rounded-lg border border-green-200">
                     <div className="text-green-700 font-semibold text-sm">Impact: {project.impact}</div>
                   </div>
-                )}
+                )} */}
                 
                 <div className="mb-6">
                   <div className="text-sm font-semibold text-gray-700 mb-2">Tech Stack:</div>
@@ -105,20 +105,33 @@ const Projects = () => {
                       View Case Study
                     </button>
                   )}
-                  <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors duration-300">
+                  {/* <button className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors duration-300">
                     <Github className="w-4 h-4" />
-                  </button>
+                  </button> */}
+
+                  {project.title === "TSF Donation Portal" && (
+  <a
+    href="https://tsf-donation-website.vercel.app/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:border-gray-400 transition-colors duration-300 flex items-center gap-2"
+  >
+    <ExternalLink className="w-4 h-4" />
+    Live Demo
+  </a>
+) }
+
                 </div>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        {/* <div className="text-center mt-12">
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-semibold hover:shadow-lg transition-all duration-300">
             View All Projects
           </button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
