@@ -108,9 +108,9 @@ const EnterpriseAICaseStudy = () => {
 
         {/* Impact */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Impact on Enterprise Operations</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">🚀 Impact & Results</h2>
           <div className="bg-green-50 border border-green-200 rounded-xl p-8">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600 mb-2">Weeks → Days</div>
                 <p className="text-gray-700">Reduced deployment time for intelligent workflows</p>
@@ -122,6 +122,20 @@ const EnterpriseAICaseStudy = () => {
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-600 mb-2">Cross-Department</div>
                 <p className="text-gray-700">Accelerated AI adoption across HR, ITSM, Finance, and Operations</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Empowered non-technical users to independently build and deploy AI workflows</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Standardized AI agent development process across the organization</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Created a foundational system for enterprise-wide digital transformation</p>
               </div>
             </div>
           </div>

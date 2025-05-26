@@ -100,9 +100,9 @@ const AnytracCaseStudy = () => {
 
         {/* Impact */}
         <section className="mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 Cost Efficiency & Impact</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">💰 Impact & Results</h2>
           <div className="bg-green-50 border border-green-200 rounded-xl p-8">
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">60%</div>
                 <p className="text-gray-700">Reduction in operational expenditure compared to commercial systems</p>
@@ -114,6 +114,24 @@ const AnytracCaseStudy = () => {
               <div className="text-center">
                 <div className="text-3xl font-bold text-green-600 mb-2">Real-time</div>
                 <p className="text-gray-700">Data-driven insights for supply chain decisions</p>
+              </div>
+            </div>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Improved logistics accuracy and reduced shipment discrepancies by 75%</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Enhanced supply chain visibility across all touchpoints from distribution centers to point-of-sale</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Enabled data-driven decisions through detailed insights into sales and inventory flow patterns</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Reduced manual tracking efforts and human errors in inventory management</p>
               </div>
             </div>
           </div>

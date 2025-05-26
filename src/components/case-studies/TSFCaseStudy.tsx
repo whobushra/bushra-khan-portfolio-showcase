@@ -92,6 +92,20 @@ const TSFCaseStudy = () => {
         <section className="mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Impact & Results</h2>
           <div className="bg-green-50 border border-green-200 rounded-xl p-8">
+            <div className="grid md:grid-cols-3 gap-6 mb-6">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 mb-2">100%</div>
+                <p className="text-gray-700">Mobile responsive design ensuring accessibility</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 mb-2">Real-time</div>
+                <p className="text-gray-700">Transaction processing and confirmation</p>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 mb-2">Zero Cost</div>
+                <p className="text-gray-700">Solution tailored to foundation's budget</p>
+              </div>
+            </div>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
@@ -104,6 +118,10 @@ const TSFCaseStudy = () => {
               <div className="flex items-start gap-3">
                 <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
                 <p className="text-gray-700">Provided The Sparks Foundation with a scalable, no-cost solution tailored to their branding and mission</p>
+              </div>
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+                <p className="text-gray-700">Enhanced transparency in donation processing with automated receipt generation</p>
               </div>
             </div>
           </div>
