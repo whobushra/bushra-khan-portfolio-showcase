@@ -26,7 +26,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-            I'm a Full-Stack Developer crafting seamless web and mobile experiences using
+            I'm a Full-Stack Developer crafting seamless web experiences using
             <span className="font-semibold text-blue-600"> React, Node.js, and Flutter</span>.
           </p>
 

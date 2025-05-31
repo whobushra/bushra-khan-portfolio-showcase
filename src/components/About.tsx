@@ -39,7 +39,7 @@ const About = () => {
               </p>
               
               <p>
-                I excel in developing interactive web dashboards and mobile applications at both local and global scales. 
+                I excel in developing interactive web dashboards and applications at both local and global scales. 
                 My greatest strength is business awareness, which enables me to create user-centric solutions that truly 
                 solve real-world problems through intuitive interfaces and applications.
               </p>
@@ -50,7 +50,7 @@ const About = () => {
                   <div className="text-sm text-gray-500">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-purple-600">10+</div>
+                  <div className="text-2xl font-bold text-purple-600">8+</div>
                   <div className="text-sm text-gray-500">Projects Completed</div>
                 </div>
               </div>
