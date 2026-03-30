@@ -5,7 +5,8 @@ const Education = () => {
       degree: "B.Tech, Computer Science",
       institution: "Shri Ram Institute of Technology",
       period: "2019–2023",
-      description: "Bachelor's in Computer Science"
+      description:
+        "Bachelor's in Computer Science. Final year project: KNEWY—an organised learning hub (roadmaps, docs, curated videos). See Projects.",
     },
     {
       degree: "Higher Secondary",

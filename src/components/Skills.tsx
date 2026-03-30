@@ -17,16 +17,16 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="section-padding bg-gray-50">
+    <section id="skills" className="section-padding bg-muted/40 dark:bg-muted/20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+          <div className="inline-flex items-center px-4 py-2 bg-green-100 text-green-700 dark:bg-green-950/50 dark:text-green-300 rounded-full text-sm font-medium mb-4">
             My Skills
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
             Technologies & <span className="gradient-bg bg-clip-text text-transparent">Tools I Use</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             A comprehensive toolkit for building modern, scalable applications
           </p>
         </div>
@@ -44,7 +44,7 @@ const Skills = () => {
         </div>
         
         <div className="mt-16 text-center">
-          <p className="text-gray-600">
+          <p className="text-muted-foreground">
             Continuously learning and adapting to new technologies to deliver cutting-edge solutions
           </p>
         </div>
